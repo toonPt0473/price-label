@@ -75,10 +75,9 @@ function App() {
                   width: 223,
                   border: "1px solid black",
                   padding: 0,
-                  margin: "4px 4px 0 0",
                   pageBreakInside: "avoid",
-                  height: 115,
                   overflow: "hidden",
+                  height: 123,
                 }}
               >
                 <div style={{ textAlign: "left" }}>
@@ -88,12 +87,13 @@ function App() {
                   style={{
                     width: 220,
                     margin: "0 0 4px 0",
-                    fontSize: "0.9rem",
+                    fontSize: "0.85rem",
                     fontWeight: "bold",
                     lineHeight: "1.0rem",
                     textAlign: "left",
-                    height: "1.8rem",
+                    height: "1.7rem",
                     paddingLeft: 2,
+                    paddingRight: 4,
                   }}
                 >
                   {e.name}
@@ -159,9 +159,9 @@ function App() {
                     <div style={{ width: "100%", background: "#E7EEDE" }}>
                       <p
                         style={{
-                          fontSize: "2rem",
+                          fontSize: "2.2rem",
                           fontWeight: "bold",
-                          lineHeight: "1.8rem",
+                          lineHeight: "2rem",
                           margin: 0,
                           textAlign: "center",
                         }}
@@ -175,10 +175,9 @@ function App() {
                   style={{
                     flex: 1,
                     flexGrow: 0,
-                    fontSize: "0.7rem",
                     textAlign: "left",
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     justifyContent: "space-between",
                     width: "100%",
                   }}
@@ -188,12 +187,12 @@ function App() {
                       width: "60%",
                       alignSelf: "flex-end",
                       textAlign: "right",
+                      fontSize: "0.8rem",
                     }}
                   >
                     {e.price1 && e.price2 && e.quantity && (
                       <p
                         style={{
-                          alignSelf: "flex-end",
                           margin: 0,
                         }}
                       >
@@ -207,7 +206,7 @@ function App() {
                         style={{
                           alignSelf: "flex-end",
                           margin: 0,
-                          fontSize: 16,
+                          fontSize: 20,
                           fontWeight: "bold",
                         }}
                       >
