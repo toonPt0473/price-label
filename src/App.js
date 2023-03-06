@@ -71,13 +71,14 @@ function App() {
             return (
               <div
                 style={{
-                  minWidth: 220,
-                  width: 220,
+                  minWidth: 223,
+                  width: 223,
                   border: "1px solid black",
-                  padding: "0 4px",
+                  padding: 0,
                   margin: "4px 4px 0 0",
                   pageBreakInside: "avoid",
                   height: 115,
+                  overflow: "hidden",
                 }}
               >
                 <div style={{ textAlign: "left" }}>
@@ -85,13 +86,14 @@ function App() {
                 </div>
                 <p
                   style={{
-                    width: 210,
+                    width: 220,
                     margin: "0 0 4px 0",
                     fontSize: "0.9rem",
                     fontWeight: "bold",
                     lineHeight: "1.0rem",
                     textAlign: "left",
                     height: "1.8rem",
+                    paddingLeft: 2,
                   }}
                 >
                   {e.name}
