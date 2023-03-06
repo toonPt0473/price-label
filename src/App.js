@@ -74,7 +74,7 @@ function App() {
                   minWidth: 220,
                   width: 220,
                   border: "1px solid black",
-                  padding: "4px 10px",
+                  padding: "4px",
                   margin: "4px 4px 0 0",
                   pageBreakInside: "avoid",
                   height: 155,
