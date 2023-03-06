@@ -77,6 +77,7 @@ function App() {
                   padding: "4px 10px",
                   margin: "4px 4px 0 0",
                   pageBreakInside: "avoid",
+                  height: 155,
                 }}
               >
                 <div style={{ textAlign: "left" }}>
@@ -85,14 +86,12 @@ function App() {
                 <p
                   style={{
                     width: 210,
-                    textOverflow: "clip",
-                    overflow: "hidden",
-                    whiteSpace: "nowrap",
-                    margin: "0 0 10px 0",
-                    fontSize: "0.9rem",
+                    margin: "0 0 4px 0",
+                    fontSize: "1rem",
                     fontWeight: "bold",
                     lineHeight: "1.2rem",
                     textAlign: "left",
+                    height: "3rem",
                   }}
                 >
                   {e.name}
@@ -100,10 +99,9 @@ function App() {
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-end",
                     justifyContent: "center",
                     gap: 4,
-                    marginBottom: 6,
                   }}
                 >
                   <div
@@ -123,7 +121,7 @@ function App() {
                   >
                     <Barcode
                       value={e.barcode}
-                      height={40}
+                      height={34}
                       width={0.95}
                       margin={0}
                       displayValue={false}
@@ -136,6 +134,10 @@ function App() {
                       width: "39%",
                       minWidth: "39%",
                       maxWidth: "39%",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
                     <div
@@ -143,15 +145,69 @@ function App() {
                         width: "100%",
                         background: "#BFBFBF",
                         fontSize: "1rem",
+                        textAlign: "center",
                       }}
                     >
-                      {e.unit}
-                    </div>
-                    <div style={{ width: "100%", background: "#E7EEDE" }}>
-                      <p style={{ fontSize: 30, margin: 0, padding: "10px 0" }}>
-                        {e.price || 0}
+                      <p style={{ margin: 0 }}>
+                        {e.unit1}
+                        {e.unit2 ? ` / ${e.unit2}` : ""}
                       </p>
                     </div>
+                    <div style={{ width: "100%", background: "#E7EEDE" }}>
+                      <p
+                        style={{
+                          fontSize: 30,
+                          margin: 0,
+                          textAlign: "center",
+                        }}
+                      >
+                        {e.price1 || 0}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    flex: 1,
+                    flexGrow: 0,
+                    fontSize: "0.7rem",
+                    textAlign: "left",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "60%",
+                      alignSelf: "flex-end",
+                      textAlign: "right",
+                    }}
+                  >
+                    {e.price1 && e.price2 && e.quantity && (
+                      <p
+                        style={{
+                          alignSelf: "flex-end",
+                          margin: 0,
+                        }}
+                      >
+                        เฉลี่ย {Number(e.price2) / Number(e.quantity)}/{e.unit1}
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    {e.price2 && (
+                      <p
+                        style={{
+                          alignSelf: "flex-end",
+                          margin: 0,
+                          fontSize: 20,
+                        }}
+                      >
+                        {e.price2}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
