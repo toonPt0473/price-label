@@ -74,10 +74,10 @@ function App() {
                   minWidth: 220,
                   width: 220,
                   border: "1px solid black",
-                  padding: "4px",
+                  padding: "0 4px",
                   margin: "4px 4px 0 0",
                   pageBreakInside: "avoid",
-                  height: 155,
+                  height: 115,
                 }}
               >
                 <div style={{ textAlign: "left" }}>
@@ -87,11 +87,11 @@ function App() {
                   style={{
                     width: 210,
                     margin: "0 0 4px 0",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     fontWeight: "bold",
-                    lineHeight: "1.2rem",
+                    lineHeight: "1.0rem",
                     textAlign: "left",
-                    height: "3rem",
+                    height: "1.8rem",
                   }}
                 >
                   {e.name}
@@ -121,7 +121,7 @@ function App() {
                   >
                     <Barcode
                       value={e.barcode}
-                      height={34}
+                      height={24}
                       width={0.95}
                       margin={0}
                       displayValue={false}
@@ -144,7 +144,8 @@ function App() {
                       style={{
                         width: "100%",
                         background: "#BFBFBF",
-                        fontSize: "1rem",
+                        fontSize: "0.7rem",
+                        fontWeight: "bold",
                         textAlign: "center",
                       }}
                     >
@@ -156,7 +157,9 @@ function App() {
                     <div style={{ width: "100%", background: "#E7EEDE" }}>
                       <p
                         style={{
-                          fontSize: 30,
+                          fontSize: "2rem",
+                          fontWeight: "bold",
+                          lineHeight: "1.8rem",
                           margin: 0,
                           textAlign: "center",
                         }}
@@ -202,7 +205,8 @@ function App() {
                         style={{
                           alignSelf: "flex-end",
                           margin: 0,
-                          fontSize: 20,
+                          fontSize: 16,
+                          fontWeight: "bold",
                         }}
                       >
                         {e.price2}
